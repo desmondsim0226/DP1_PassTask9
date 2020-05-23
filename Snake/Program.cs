@@ -408,7 +408,29 @@ namespace Snake
                     {
                         file.WriteLine(player_name + " " + userPoints);
                     }
-                    return;
+                 
+                    while (true)
+                    {
+                        string replayMessage = "Continue? ";
+                        Console.SetCursorPosition((Console.WindowWidth - replayMessage.Length) / 2, (Console.WindowHeight / 2) + 2);
+                        Console.WriteLine(replayMessage);
+                        string replayMessage2 = "[1]Yes  [2]No";
+                        Console.SetCursorPosition((Console.WindowWidth - replayMessage2.Length) / 2, (Console.WindowHeight / 2) + 3);
+                        Console.WriteLine(replayMessage2);
+                        string userInput = Console.ReadLine();
+
+                        if (userInput == "1")
+                        {
+                            Console.Clear();
+                            Program.Main();
+                        }
+                        else if (userInput == "2")
+                        {
+                            return;
+                        }
+                        return;
+                    }
+                 
                 }
                 //when the snake died
                 if(snakeLives == 0 || (snakeNewHead.col < 0) || (snakeNewHead.row < 2) || (snakeNewHead.row >= Console.WindowHeight) || (snakeNewHead.col >= Console.WindowWidth))
@@ -427,7 +449,28 @@ namespace Snake
                     {
                         file.WriteLine(player_name + " " + userPoints);
                     }
-                    return;
+                    
+                    while (true)
+                    {
+                        string replayMessage = "Continue? ";
+                        Console.SetCursorPosition((Console.WindowWidth - replayMessage.Length) / 2, (Console.WindowHeight / 2) + 2);
+                        Console.WriteLine(replayMessage);
+                        string replayMessage2 = "[1]Yes  [2]No";
+                        Console.SetCursorPosition((Console.WindowWidth - replayMessage2.Length) / 2, (Console.WindowHeight / 2) + 3);
+                        Console.WriteLine(replayMessage2);
+                        string userInput = Console.ReadLine();
+
+                        if (userInput == "1")
+                        {
+                            Console.Clear();
+                            Program.Main();
+                        }
+                        else if (userInput == "2")
+                        {
+                            return;
+                        }
+                        return;
+                    }
                 }
                 
                            
