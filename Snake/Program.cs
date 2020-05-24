@@ -181,7 +181,7 @@ namespace Snake
     {
         //the main compiler
         
-        static void Main(string[] args)
+        static void Main()
         {
             MainMenu startgame = new MainMenu();
             byte right = 0;
