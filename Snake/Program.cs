@@ -109,6 +109,25 @@ namespace Snake
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("*");
         }
+     
+        public int bonusFoodFunction(int points)
+        {
+            //make a list to store functions
+            List<Action> foodAction = new List<Action>();
+
+            //function to minus score by 1
+            foodAction.Add(() => points--);
+            //function to add score by 2
+            foodAction.Add(() => points += 2);
+
+            Random random = new Random();
+
+            //randomize the functions to either give bonus points or minus point
+            int selectedfoodAction = random.Next(0, foodAction.Count());
+            foodAction[selectedfoodAction].Invoke();
+
+            return points;
+        }
     }
     
     //Main Menu class
@@ -549,8 +568,8 @@ namespace Snake
                     SoundPlayer sound3 = new SoundPlayer("food.wav");
                     sound3.Play();
 
-                    //add one point when food is eaten
-                    userPoints += 2;
+                    //add bonus points or minus a point
+                    userPoints = game1.bonusFoodFunction(userPoints);
 
                     //creates new Bonusfood 
                     do
