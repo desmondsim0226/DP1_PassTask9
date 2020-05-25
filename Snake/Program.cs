@@ -421,6 +421,8 @@ namespace Snake
                     SoundPlayer sound2 = new SoundPlayer("gamestart.wav");
                     sound2.Play();
 
+                    backgroundMusic.Stop();
+
                     string player_name = game1.gameWon();
 
                     using (StreamWriter file = new StreamWriter("Score.txt", true))
@@ -460,6 +462,8 @@ namespace Snake
 
                     SoundPlayer sound1 = new SoundPlayer("die.wav");
                     sound1.Play();
+                    
+                    backgroundMusic.Stop();
 
                     string player_name = game1.gameOverScreen(userPoints, snakeLives);
 
