@@ -430,7 +430,8 @@ namespace Snake
                         file.WriteLine(player_name + " " + userPoints);
                     }
                
-                    
+                    while(true)
+                    {
                         string replayMessage = "Continue? ";
                         Console.SetCursorPosition((Console.WindowWidth - replayMessage.Length) / 2, (Console.WindowHeight / 2) + 2);
                         Console.WriteLine(replayMessage);
@@ -449,11 +450,11 @@ namespace Snake
                             return;
                         }
                         return;
-                    
+                    }
                  
                 }
                 //when the snake died
-                else if(snakeLives == 0 || (snakeNewHead.col < 0) || (snakeNewHead.row < 2) || (snakeNewHead.row >= Console.WindowHeight) || (snakeNewHead.col >= Console.WindowWidth))
+                if(snakeLives == 0 || (snakeNewHead.col < 0) || (snakeNewHead.row < 2) || (snakeNewHead.row >= Console.WindowHeight) || (snakeNewHead.col >= Console.WindowWidth))
                 {
                     //This is to display the snake lives.
                     Console.SetCursorPosition(100, 0);
@@ -472,7 +473,8 @@ namespace Snake
                         file.WriteLine(player_name + " " + userPoints);
                     }
                     
-                    
+                    while(true)
+                    {
                         string replayMessage = "Continue? ";
                         Console.SetCursorPosition((Console.WindowWidth - replayMessage.Length) / 2, (Console.WindowHeight / 2) + 2);
                         Console.WriteLine(replayMessage);
@@ -491,6 +493,7 @@ namespace Snake
                             return;
                         }
                         return;
+                    }
                     
                 }
                 
