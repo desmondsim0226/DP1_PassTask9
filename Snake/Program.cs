@@ -343,7 +343,7 @@ namespace Snake
                 negativePoints++;
                 //background music (looping)
                 backgroundMusic.Play();
-                if (backgroundMusic.Position >= new TimeSpan(0, 0, 29))
+                if (backgroundMusic.Position >= new TimeSpan(0, 0, 24))
                 {
                     backgroundMusic.Position = new TimeSpan(0, 0, 0);
                 }
@@ -453,7 +453,7 @@ namespace Snake
                  
                 }
                 //when the snake died
-                if(snakeLives == 0 || (snakeNewHead.col < 0) || (snakeNewHead.row < 2) || (snakeNewHead.row >= Console.WindowHeight) || (snakeNewHead.col >= Console.WindowWidth))
+                else if(snakeLives == 0 || (snakeNewHead.col < 0) || (snakeNewHead.row < 2) || (snakeNewHead.row >= Console.WindowHeight) || (snakeNewHead.col >= Console.WindowWidth))
                 {
                     //This is to display the snake lives.
                     Console.SetCursorPosition(100, 0);
@@ -472,7 +472,7 @@ namespace Snake
                         file.WriteLine(player_name + " " + userPoints);
                     }
                     
-                   
+                    
                         string replayMessage = "Continue? ";
                         Console.SetCursorPosition((Console.WindowWidth - replayMessage.Length) / 2, (Console.WindowHeight / 2) + 2);
                         Console.WriteLine(replayMessage);
