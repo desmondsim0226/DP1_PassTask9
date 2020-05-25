@@ -427,9 +427,8 @@ namespace Snake
                     {
                         file.WriteLine(player_name + " " + userPoints);
                     }
-                 
-                    while (true)
-                    {
+               
+                    
                         string replayMessage = "Continue? ";
                         Console.SetCursorPosition((Console.WindowWidth - replayMessage.Length) / 2, (Console.WindowHeight / 2) + 2);
                         Console.WriteLine(replayMessage);
@@ -448,7 +447,7 @@ namespace Snake
                             return;
                         }
                         return;
-                    }
+                    
                  
                 }
                 //when the snake died
@@ -469,8 +468,7 @@ namespace Snake
                         file.WriteLine(player_name + " " + userPoints);
                     }
                     
-                    while (true)
-                    {
+                   
                         string replayMessage = "Continue? ";
                         Console.SetCursorPosition((Console.WindowWidth - replayMessage.Length) / 2, (Console.WindowHeight / 2) + 2);
                         Console.WriteLine(replayMessage);
@@ -489,7 +487,7 @@ namespace Snake
                             return;
                         }
                         return;
-                    }
+                    
                 }
                 
                            
